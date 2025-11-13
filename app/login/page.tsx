@@ -1,10 +1,13 @@
-import OAuthLoginButton from "@/components/molecules/OAuthLoginButton";
+"use client";
+
+import { LineLoginButton } from "@/components/atoms/LineLoginButtonEx";
 
 export default function LoginPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <h1 className="text-2xl font-bold mb-4">ログイン</h1>
-      <OAuthLoginButton />
+      <div className="mt-2">
+        <LineLoginButton onClick={() => console.log("LINEログイン押された")} />
+      </div>
     </div>
   );
 }
